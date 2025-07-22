@@ -1,11 +1,10 @@
 ---
 import "../styles/global.css"; //Importación de estilo globales de la libreria de daisyUI
-
 ---
 <!doctype html>
 <html lang="es">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta
       name="description"
@@ -21,9 +20,12 @@ import "../styles/global.css"; //Importación de estilo globales de la libreria 
     <meta property="og:image:alt" content="Logo oficial de Gravita Stick" /> -->
 
     <!-- Iconos de la página -->
-	  <link rel="icon" type="image/svg+xml" href="/code.svg"/>
+    <link rel="icon" type="image/svg+xml" href="/code.svg" />
     <title>Portafolio - Fabio Ortega</title>
   </head>
-  <body> 
-    <slot>
+  <body>
+    <main class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+      <slot/>
+    </main>
+  </body>
 </html>

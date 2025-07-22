@@ -2,3 +2,113 @@
 @plugin "daisyui"{
     themes: light --default, dark --prefersdark;
 }
+
+/*--------Boton personalizado - INICIO--------*/
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+#btn:hover,:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff,
+              0 0 10px #ffffff,
+              0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff,
+              0 0 20px #008cff,
+              0 0 50px #008cff,
+              0 0 100px #008cff;
+  font-size: 16px;
+  border-color: transparent;
+}
+/*--------Boton personalizado - FIN --------*/
+
+/*--------Redes sociales - INICIO --------*/
+  .social-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-link:hover {
+    transform: scale(1.1);
+  }
+
+  .social-link.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+
+  .social-link.github:hover {
+    background-color: #333;
+  }
+
+  .social-link.linkedin:hover {
+    background-color: #0a66c2;
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+/*--------Redes sociales - FIN --------*/
+
+/*--------Estilo de escritura - INICIO --------*/
+#NombreNav {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 12ch;
+  font-size: 1.5rem;
+  text-align: center;
+  /* El cursor desaparece después de 3 segundos (2s de escritura + 1s extra) */
+  animation: typing 2s steps(12), cursor-blink 0.5s infinite step-end alternate, hide-cursor 0.1s 3s forwards;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12ch;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes hide-cursor {
+  to {
+    border-color: transparent;
+  }
+}
+/*--------Estilo de escritura - FIN --------*/
