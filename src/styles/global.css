@@ -4,9 +4,8 @@
 }
 
 /*--------Boton personalizado - INICIO--------*/
-button {
-  padding: 10px 20px;
-  text-transform: uppercase;
+#btn {
+  padding: 6px 18px;
   border-radius: 8px;
   font-size: 17px;
   font-weight: 500;
@@ -19,7 +18,7 @@ button {
   user-select: none;
 }
 
-#btn:hover,:focus {
+#btn:hover, #btn:focus  {
   color: #ffffff;
   background: #008cff;
   border: 1px solid #008cff;
@@ -78,37 +77,34 @@ button {
 /*--------Redes sociales - FIN --------*/
 
 /*--------Estilo de escritura - INICIO --------*/
-#NombreNav {
-  display: block;
-  font-family: monospace;
+#NombreEscritura {
+  display:block;
   white-space: nowrap;
-  border-right: 2px solid;
+  border-right: 3px solid;
   width: 12ch;
-  font-size: 1.5rem;
-  text-align: center;
-  /* El cursor desaparece después de 3 segundos (2s de escritura + 1s extra) */
-  animation: typing 2s steps(12), cursor-blink 0.5s infinite step-end alternate, hide-cursor 0.1s 3s forwards;
+
+  animation: typing 2s steps(12), blink .6s infinite step-end alternate; 
   overflow: hidden;
 }
 
-@keyframes typing {
-  from {
+@keyframes typing{
+  from{
     width: 0;
   }
-  to {
-    width: 12ch;
-  }
 }
 
-@keyframes cursor-blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes hide-cursor {
-  to {
+@keyframes blink{
+  50%{
     border-color: transparent;
   }
 }
 /*--------Estilo de escritura - FIN --------*/
+
+/*--------Estilo de foto de perfil - INICIO --------*/
+.fotoProfile{
+  mask-image: linear-gradient(
+    black 75%,
+    transparent
+    )
+}
+/*--------Estilo de foto de perfil - FIN --------*/

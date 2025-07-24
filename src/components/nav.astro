@@ -1,6 +1,6 @@
 ---
 import Button from "./ui/button.astro";
-import {Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+import {Astronav, MenuIcon, MenuItems} from 'astro-navbar';
 
 const menuitems = [
     {
@@ -23,7 +23,7 @@ const menuitems = [
         <!-- Layout para móvil: botón - nombre - hamburguesa -->
         <div class="flex w-full items-center justify-between lg:hidden">
             <Button></Button>
-            <h2 id="NombreNav">Fabio Ortega</h2>
+            <!-- <h2 id="NombreNav">Fabio Ortega</h2> -->
             <div class="mr-3">
                 <MenuIcon class="h-6 w-6 text-white dark:text-white" />
             </div>
@@ -37,22 +37,23 @@ const menuitems = [
             </div>
             
             <!-- Nombre centrado -->
-            <div class="flex-1 flex justify-center">
+            <!-- <div class="flex-1 flex justify-center">
                 <h2 id="NombreNav">Fabio Ortega</h2>
-            </div>
+            </div> -->
             
             <!-- Espacio para mantener el balance (invisible) -->
             <div class="flex-shrink-0 w-24"></div>
         </div>
 
         <MenuItems class="mt-2 hidden w-full lg:mt-0 lg:flex lg:w-auto lg:justify-center"> 
-            <ul class="flex flex-col lg:flex-row lg:space-x-6">
+            <ul class="flex flex-col lg:flex-row lg:space-x-6 ">
                 {menuitems.map((item) => (
-                    <li class="lg:whitespace-nowrap">
+                    <li class="lg:whitespace-nowrap text-xl ">
                         <a
+                            id="itemsNav"
                             aria-label="navigation link"
                             href={item.path}
-                            class="block py-2 px-4 text-white hover:text-orange dark:text-white dark:hover:text-orange lg:px-3 whitespace-nowrap"
+                            class="block mr-3 py-2 px-4 text-white lg:px-3 whitespace-nowrap rounded-md hover:bg-blue-500 font-bold font-mono"
                         >
                             {item.title}
                         </a>
