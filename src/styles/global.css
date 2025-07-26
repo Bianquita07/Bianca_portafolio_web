@@ -108,3 +108,44 @@
     )
 }
 /*--------Estilo de foto de perfil - FIN --------*/
+
+.imagenes{
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.card-logo{
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.card-logo:before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.card-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.card-logo:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
