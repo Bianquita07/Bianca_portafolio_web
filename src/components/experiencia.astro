@@ -1,0 +1,41 @@
+---
+const menuitems = [
+  {
+    year: "Agosto 2022 - Junio 2025",
+    title: "Becario de Sistemas | UNIFRANZ",
+    description:
+      "Responsable del soporte técnico y mantenimiento de infraestructura informática, incluyendo resolución de incidencias y optimización de redes. Manejo equipos audiovisuales para eventos institucionales, contribuyendo a la mejora continua de los procesos tecnológicos de la universidad.",
+  },
+  {
+    year: "Agosto 2023 - Julio 2024",
+    title: "Voluntario | FABLAB SANTA CRUZ",
+    description: "Colaboré en proyectos de fabricación digital, participando activamente en el diseño y desarrollo de prototipos utilizando tecnologías de impresión 3D y corte láser. Contribuí al fortalecimiento del ecosistema maker local, apoyando en la creación de soluciones innovadoras y promoviendo el aprendizaje colaborativo en tecnologías emergentes.",
+  },
+  {
+    year: "Febrero 2021 - Abril 2023",
+    title: "Profesor de Informática | COOPERAND",
+    description: "Lideré la enseñanza de habilidades computacionales fundamentales, diseñando metodologías pedagógicas que facilitaron el aprendizaje efectivo de herramientas informáticas. Brindé soporte personalizado a estudiantes, logrando mejorar significativamente su comprensión y manejo de tecnologías digitales esenciales para su desarrollo académico y profesional.",
+  },
+  
+  
+];
+---
+
+<section class="px-4 pt-6 mx-auto max-w-7xl">
+  <h2
+    class="mb-3 text-3xl font-bold leading-tight text-center dark:text-gray-100 md:text-5xl">
+    Experiencia
+  </h2>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+    menuitems.map((item) => (
+      <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-amber-400"></div>
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{item.year}</time>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{item.description}</p>
+      </li>
+    ))
+  }
+  </ol>
+</section>
