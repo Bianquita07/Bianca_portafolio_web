@@ -3,8 +3,15 @@
     themes: light --default, dark --prefersdark;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+
+
 /*--------Boton personalizado - INICIO--------*/
 #btn {
+  margin-left: 0px;
   padding: 6px 18px;
   border-radius: 8px;
   font-size: 17px;
@@ -109,6 +116,7 @@
 }
 /*--------Estilo de foto de perfil - FIN --------*/
 
+/*--------Estilo de los iconos de la sección de habilidades - INICIO --------*/
 .imagenes{
   width: 90%;
   aspect-ratio: 1 / 1;
@@ -149,3 +157,14 @@
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
+
+/*--------Estilo de los iconos de la sección de habilidades - FIN --------*/
+
+/*--------Estilo de la sección de Proyectos - INICIO --------*/
+.card-proyectos{
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.card-proyectos:hover{
+  transform: scale(1.04);}
+/*--------Estilo de la sección de Proyectos - FIN --------*/

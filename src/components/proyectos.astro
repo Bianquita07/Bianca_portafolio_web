@@ -1,0 +1,80 @@
+---
+const menuitems = [
+  {
+    image: "/images/proyecto2.webp",
+    title: "Sistema de escaner redes wifi",
+    icon: [
+      "/icons/iconPython.svg",
+      "/icons/iconGit.svg", 
+    ],
+    tecnology: [
+      "Python",
+      "Git"
+    ],
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    image: "/images/proyecto1.webp",
+    title: "Sistema de gestión de inventario",
+    icon: [
+      "/icons/iconLaravel.svg",
+      "/icons/iconTailwindCSS.svg", 
+      "/icons/iconPhp.svg",
+      "/icons/iconGit.svg",
+    ],
+    tecnology:[
+      "Laravel",
+      "Tailwind CSS",
+      "Php",
+      "Git", 
+    ],
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+    {
+    image: "/images/proyecto3.webp",
+    title: "Reconocimiento facial",
+    icon: [
+      "/icons/iconPython.svg",
+      "/icons/iconOpenCV.svg",
+    ],
+    tecnology:[
+      "Python",
+      "OpenCV",
+    ],
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+]
+---
+
+<section id="Proyectos" class="px-4 py-8 mx-auto max-w-7xl">
+  <h2
+    class="mb-12 text-3xl font-bold leading-tight text-center text-gray-100 md:text-5xl">
+    Proyectos
+  </h2>
+
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {menuitems.map((item) => (
+      <div class="card-proyectos max-w-sm border rounded-lg shadow-sm bg-gray-800/50 dark:border-gray-700">
+        <img class="rounded-t-lg" src={item.image} alt={item.title}/>
+        <div class="flex flex-wrap gap-2 mt-3 px-5">
+          {item.tecnology.map((tech, index) => (
+            <div
+              class="flex items-center space-x-1 text-gray-100 bg-gray-800/45 px-2 py-1 rounded-md text-xs font-semibold">
+              <img class="w-4 h-4" src={item.icon[index]} alt={tech} />
+              <span>{tech}</span>
+            </div>
+          ))}
+        </div>
+        <div class="p-5 pt-3">
+          <h3
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-100">
+            {item.title}
+          </h3>
+          <p class="mb-3 font-normal text-gray-400">
+            {item.description}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
