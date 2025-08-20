@@ -76,6 +76,15 @@ html{
     background-color: #0a66c2;
   }
 
+  .social-link.whatsapp:hover {
+    background-color: #25d366;
+  }
+  
+  .social-link.whatsapp svg {
+  width: 24px;  /* o el tamaño que prefieras */
+  height: 24px;
+}
+
   .social-link svg {
     width: 20px;
     height: 20px;
